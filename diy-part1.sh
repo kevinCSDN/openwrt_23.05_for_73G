@@ -53,11 +53,11 @@ sed -i '$a src-git packages_imm https://github.com/immortalwrt/packages' feeds.c
 
 
 
-#git clone https://github.com/kiddin9/openwrt-packages
-#shopt -s extglob
-#rm -rf openwrt-packages/!(luci-app-netdata|luci-app-smartdns|luci-app-upnp)
-#cp -r openwrt-packages/{luci-app-netdata,luci-app-smartdns,luci-app-upnp} package/
-#rm -rf openwrt-packages
+git clone https://github.com/kiddin9/openwrt-packages
+shopt -s extglob
+rm -rf openwrt-packages/!(luci-app-netdata|luci-app-smartdns|luci-app-upnp)
+cp -r openwrt-packages/{luci-app-netdata,luci-app-smartdns,luci-app-upnp} package/
+rm -rf openwrt-packages
 
 #git clone https://github.com/coolsnowwolf/luci luci1
 #shopt -s extglob
@@ -87,17 +87,17 @@ git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config
 
 
 #克隆passwall环境插件
-#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
 
 #克隆的源码放在small文件夹,预先建立small文件夹
-#mkdir package/small
-#pushd package/small
+mkdir package/small
+pushd package/small
 
 #克隆源码
 
 #passwall2
 #git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
-#git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
+git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 #mosdns
 # git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns.git
 #git clone --depth=1 https://github.com/fw876/helloworld.git
