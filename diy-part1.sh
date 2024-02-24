@@ -75,12 +75,12 @@ rm -rf feeds/luci/themes/luci-theme-BootstrapLight
 
 cd package
 git clone https://github.com/f8q8/luci-app-autoreboot.git
-git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git
+#git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git
 #git clone -b main https://github.com/sirpdboy/luci-app-advancedplus.git
 cd ..
 
-git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+#git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+#git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 
 
@@ -95,7 +95,7 @@ pushd package/small
 #克隆源码
 
 #passwall2
-git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
+#git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
 git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 #mosdns
 # git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns.git
