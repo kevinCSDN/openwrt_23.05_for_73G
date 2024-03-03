@@ -31,7 +31,7 @@
 #sed -i '$a src-git routing https://github.com/coolsnowwolf/routing' feeds.conf.default
 #sed -i '$a src-git kenzo https://github.com/kiddin9/openwrt-packages' feeds.conf.default
 #git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
-sed -i '$a src-git packages_imm https://github.com/immortalwrt/packages' feeds.conf.default
+#sed -i '$a src-git packages_imm https://github.com/immortalwrt/packages' feeds.conf.default
 
 #拉取文件包里一个插件的方法
 #拉取整个包
@@ -67,6 +67,12 @@ rm -rf openwrt-packages
 
 
 #删除feeds自带mosdns、v2ray-geodata
+# Modify default IP（FROM 192.168.1.1 CHANGE TO 10.10.10.1）
+#sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
+
+# Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
+
 rm -rf ./feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/luci/themes/luci-theme-argon
@@ -95,8 +101,8 @@ pushd package/small
 
 #克隆源码
 
-#passwall2
-#git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
+passwall2
+git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
 git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 #mosdns
 # git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns.git
@@ -107,4 +113,4 @@ git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 
 # git clone https://github.com/kevinCSDN/luci-app-vssr-plus.git  
 
-#popd
+popd
