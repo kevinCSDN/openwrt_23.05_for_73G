@@ -89,6 +89,8 @@ git clone https://github.com/f8q8/luci-app-autoreboot.git package/
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
+git clone -b master --single-branch https://github.com/LGA1150/openwrt-fullconenat package/fullconenat
+
 
 
 
