@@ -81,7 +81,7 @@ rm -rf feeds/luci/themes/luci-theme-BootstrapDark
 rm -rf feeds/luci/themes/luci-theme-BootstrapLight
 
 
-git clone https://github.com/f8q8/luci-app-autoreboot.git package/
+git clone https://github.com/f8q8/luci-app-autoreboot package/luci-app-autoreboot
 #git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git
 #git clone -b main https://github.com/sirpdboy/luci-app-advancedplus.git
 
