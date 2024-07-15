@@ -16,7 +16,7 @@
 #git clone --depth=1 -b master https://github.com/sirpdboy/luci-theme-kucat：这个命令同样克隆仓库并检出master分支，但使用了--depth=1选项。这个选项创建一个浅克隆，只包含最新的提交，没有超过指定深度的提交历史。
 #这两个命令的实际效果是，第二个命令（--depth=1）创建了一个更小的克隆，只包含最新的提交，而没有完整的提交历史。这对于只关注仓库的最新状态并且想要节省带宽和磁盘空间的情况可能会很有用。
 #总的来说，就代码而言，这两个命令的结果可能是一样的，但第二个命令（--depth=1）创建了一个更小的克隆，没有完整的历史记录。
-      
+sed -i '1i src-git small https://github.com/kenzok8/small' feeds.conf.default      
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 # Uncomment a feed source
 # 将原luci注释掉
@@ -79,7 +79,8 @@ rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-Bootstrap
 rm -rf feeds/luci/themes/luci-theme-BootstrapDark
 rm -rf feeds/luci/themes/luci-theme-BootstrapLight
-
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
 git clone https://github.com/f8q8/luci-app-autoreboot package/luci-app-autoreboot
 #git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git
